@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/relativeLayout"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <RadioGroup
+        android:id="@+id/rgChoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rBtnRed"
+            android:layout_width="wrap_content"
+            android:text="Red Color"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/rBtnGreen"
+            android:layout_width="wrap_content"
+            android:text="Green Color"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            />
+        <RadioButton
+            android:id="@+id/rBtnBlue"
+            android:layout_width="wrap_content"
+            android:text="Blue Color"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"
+            />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cbFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="37dp"
+        android:text="First"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/cbSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cbFirst"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:text="Second"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/cbThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cbSecond"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:text="Third"
+        android:textSize="20sp" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerView"
+        android:name="com.o7solutions.interaction.FirstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/cbThird"
+        tools:ignore="NotSibling" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerView1"
+        android:name="com.o7solutions.interaction.SecondFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/containerView"
+        tools:ignore="NotSibling" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/containerView2"
+        android:name="com.o7solutions.interaction.ThirdFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@+id/containerView1"
+        tools:ignore="NotSibling" />
+
+
+
+</RelativeLayout>
